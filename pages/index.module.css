@@ -1,0 +1,40 @@
+.story-background {
+  display: flex;
+  max-width: 720px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 100px;
+}
+
+.loading-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-wrapper {
+  text-align: center;
+  width: 50%;
+  height: auto;
+  /* overflow: visible; */
+}
+
+.adventure {
+  color: white;
+  background-color: white;
+  box-shadow: rgba(17, 50, 96, 0.4) -5px 5px, rgba(18, 65, 129, 0.3) -10px 10px,
+    rgba(20, 83, 170, 0.2) -15px 15px, rgba(18, 90, 190, 0.1) -20px 20px,
+    rgba(46, 185, 240, 0.05) -30px 30px;
+  border: 2px solid #3f3454;
+  background-color: #1f8fb4e1;
+}
+
+.paragraph {
+  margin: 0px 0 24px 0;
+}

@@ -1,0 +1,79 @@
+.button {
+  border: none;
+  border-radius: 16px;
+  padding: 8px;
+  margin-right: 4px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Bubblegum Sans", cursive;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.scifi {
+  background-color: #e9e6e6;
+  color: #5932e6;
+  box-shadow: rgba(89, 50, 230, 0.5) -1px 1px, rgba(134, 50, 230, 0.3) -2px 2px,
+    rgba(179, 50, 230, 0.2) -3px 3px, rgba(224, 50, 230, 0.1) -4px 4px,
+    rgba(224, 50, 230, 0.05) -5px 5px;
+}
+
+.scifi:hover {
+  color: white;
+  background-color: #ffae00;
+  box-shadow: 0 5px 15px #ff8800;
+}
+
+.scifi-selected {
+  color: white;
+  background-color: #ffae00;
+  box-shadow: 0 5px 15px #ff8800;
+  transition: all 0.3s ease-in-out;
+}
+
+.adventure {
+  color: rgb(211, 137, 0);
+  background-color: #e9e6e6;
+  box-shadow: rgba(211, 137, 0, 0.4) -1px 1px, rgba(236, 157, 11, 0.3) -2px 2px,
+    rgba(219, 146, 11, 0.2) -3px 3px, rgba(233, 156, 14, 0.1) -4px 4px,
+    rgba(245, 161, 6, 0.05) -5px 5px;
+}
+
+.adventure:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: #d38900;
+  box-shadow: 0 5px 15px #d38900;
+}
+
+.adventure-selected {
+  background-color: #d38900;
+  color: white;
+}
+
+.fantasy {
+  color: #3f3454;
+  background-color: white;
+  box-shadow: rgba(63, 52, 84, 0.4) -1px 1px, rgba(84, 68, 114, 0.3) -2px 2px,
+    rgba(109, 88, 150, 0.3) -3px 3px, rgba(131, 107, 180, 0.2) -4px 4px,
+    rgba(154, 127, 207, 0.1) -5px 5px;
+}
+
+.fantasy:hover {
+  color: white;
+  background-color: #3f3454;
+  box-shadow: 0 5px 15px #113260;
+}
+
+.fantasy-selected {
+  background-color: #3f3454;
+  color: white;
+}
+
+.button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.5;
+  cursor: wait;
+  cursor: not-allowed;
+}

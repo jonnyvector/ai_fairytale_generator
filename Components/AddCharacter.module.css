@@ -1,0 +1,76 @@
+.character {
+  margin-bottom: 36px;
+}
+
+.heading {
+  font-size: 32px;
+  font-family: "Bubblegum Sans", cursive;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.form {
+  margin: 12px 0;
+}
+
+.input {
+  font-family: "Bubblegum Sans", cursive;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+.tags-container {
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-remove {
+  /* margin: 8px 0; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.input:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.delete-button {
+  margin: 0 12px;
+  background-color: rgba(250, 235, 215, 0);
+  border: none;
+  cursor: pointer;
+  /* border: 1.5px solid #0060aa; */
+  border-radius: 4px;
+  /* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em; */
+  transition: all 0.2s ease-in-out;
+}
+
+.delete-button:disabled {
+  /* border: 1px solid #999999; */
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.small-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}

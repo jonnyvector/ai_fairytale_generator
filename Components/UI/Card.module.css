@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  padding: 12px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 20px;
+}
+
+.card h4 {
+  font-size: 32px;
+}
+
+.scifi {
+  color: white;
+  box-shadow: rgba(89, 50, 230, 0.5) -5px 5px,
+    rgba(134, 50, 230, 0.3) -10px 10px, rgba(179, 50, 230, 0.2) -15px 15px,
+    rgba(224, 50, 230, 0.1) -20px 20px, rgba(224, 50, 230, 0.05) -25px 25px;
+  border: 2px solid #5932e6;
+  background-color: #03051fe8;
+}
+
+.adventure {
+  box-shadow: rgba(211, 137, 0, 0.4) -5px 5px,
+    rgba(236, 157, 11, 0.3) -10px 10px, rgba(219, 146, 11, 0.2) -15px 15px,
+    rgba(233, 156, 14, 0.1) -20px 20px, rgba(245, 161, 6, 0.05) -25px 25px;
+  background-color: #3b2a3cdc;
+  border: 2px solid #cf8f17;
+  color: white;
+}
+
+.fantasy {
+  color: white;
+  background-color: white;
+  box-shadow: rgba(17, 50, 96, 0.4) -5px 5px, rgba(18, 65, 129, 0.3) -10px 10px,
+    rgba(20, 83, 170, 0.2) -15px 15px, rgba(18, 90, 190, 0.1) -20px 20px,
+    rgba(46, 185, 240, 0.05) -30px 30px;
+  border: 2px solid #3f3454;
+  background-color: #1f8fb4e1;
+}
+
+.heading {
+  margin: 24px 0;
+}
+
+.content {
+  margin: 0px 0 24px 0;
+}
