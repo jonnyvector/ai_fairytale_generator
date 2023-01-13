@@ -203,7 +203,9 @@ export default function Home() {
               <div className={classes["story-background"]}>
                 <Card title={splitResult[0]}>
                   {paragraphArray.map((paragraph) => (
-                    <p className={classes.paragraph}>{paragraph}</p>
+                    <p key={key} className={classes.paragraph}>
+                      {paragraph}
+                    </p>
                   ))}
                 </Card>
                 <Button
