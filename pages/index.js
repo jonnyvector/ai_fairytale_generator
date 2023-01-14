@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, CSSProperties } from "react";
+import { createContext, useContext, useState } from "react";
 import Head from "next/head";
 import { ClipLoader } from "react-spinners";
 import useLocalStorage from "../Components/Hooks/useLocalStorage";
@@ -202,8 +202,8 @@ export default function Home() {
             {result && (
               <div className={classes["story-background"]}>
                 <Card title={splitResult[0]}>
-                  {paragraphArray.map((paragraph) => (
-                    <p key={key} className={classes.paragraph}>
+                  {paragraphArray.map((paragraph, index) => (
+                    <p key={index} className={classes.paragraph}>
                       {paragraph}
                     </p>
                   ))}
