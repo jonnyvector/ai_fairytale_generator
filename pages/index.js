@@ -19,7 +19,7 @@ export default function Home() {
   const [result, setResult] = useState("");
   // Create state variables for the list of characters and available attribute tags
   const [characters, setCharacters] = useState([
-    { name: "", form: "", tags: [], role: "" },
+    { name: "", form: "", tags: [] },
   ]);
   const [theme, setTheme] = useLocalStorage("theme", "adventure");
   const [isLoading, setIsLoading] = useState(false);
@@ -70,7 +70,7 @@ export default function Home() {
 
   // Function to handle when the "Add Character" button is clicked
   function handleAddCharacterClick() {
-    setCharacters([...characters, { name: "", form: "", tags: [], role: "" }]);
+    setCharacters([...characters, { name: "", form: "", tags: [] }]);
   }
 
   // Function to handle when the "Remove Character" button is clicked
