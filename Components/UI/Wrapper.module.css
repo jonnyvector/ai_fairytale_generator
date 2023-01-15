@@ -7,7 +7,7 @@
 }
 
 .scifi {
-  background: url(../../public/images/scifi-ship.jpg) no-repeat center center
+  background: url(../../public/images/scifi-ship.webp) no-repeat center center
     fixed;
   height: 100%;
   overflow: hidden;
@@ -16,8 +16,8 @@
   transition: all 1s ease-in-out;
 }
 .adventure {
-  background: url(../../public/images/adventure-new.jpg) no-repeat center center
-    fixed;
+  background: url(../../public/images/adventure-new.webp) no-repeat center
+    center fixed;
   background-position: center;
   background-size: cover;
   height: 100%;
@@ -26,7 +26,8 @@
 }
 
 .fantasy {
-  background: url(../../public/images/fantasy.jpg) no-repeat center center fixed;
+  background: url(../../public/images/fantasy.webp) no-repeat center center
+    fixed;
   background-position: center;
   background-size: cover;
   height: 100%;
