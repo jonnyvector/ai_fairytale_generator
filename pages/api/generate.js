@@ -24,7 +24,7 @@ export default async function (req, res) {
 
   console.log(character, gradeLevel, mood, genre, form);
 
-  const name = character[0].name || "";
+  const name = character[0]?.name || "";
   if (name.trim().length === 0) {
     res.status(400).json({
       error: {
@@ -46,7 +46,7 @@ export default async function (req, res) {
   try {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: generatePrompt(nameAndTraits, mood, genre),
+      prompt: generatePrompt(nameAndTraits, mood, genre, gradeLevel),
       temperature: 0.8,
       max_tokens: 600,
     });
