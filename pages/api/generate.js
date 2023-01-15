@@ -19,10 +19,9 @@ export default async function (req, res) {
   const character = req.body.characters;
   const mood = req.body.mood;
   const genre = req.body.genre;
-  const form = req.body.form;
   const gradeLevel = req.body.gradeLevel;
 
-  console.log(character, gradeLevel, mood, genre, form);
+  console.log(character, gradeLevel, mood, genre);
 
   const name = character[0]?.name || "";
   if (name.trim().length === 0) {
@@ -42,6 +41,8 @@ export default async function (req, res) {
   });
 
   console.log(nameAndTraits);
+
+  console.log(JSON.stringify(nameAndTraits));
 
   try {
     const completion = await openai.createCompletion({
@@ -68,8 +69,7 @@ export default async function (req, res) {
 }
 
 function generatePrompt(nameAndTraits, genre, mood, gradeLevel) {
-  // const capitalizedName =
-  //   character.name[0].toUpperCase() + name.slice(1).toLowerCase();
+  //
   return `Create a fairy tale using the genre (if the genre is scary, people should die), grade level, mood, and names and character traits of each character provided. Give it a creative title at the beginning.
 
 Grade Level,Genre, Mood, Character, the Character's form and their traits: Grade Level, Genre, Mood, Character and their traits: Grade 4, Science Fiction, Funny, Bill who is a tiger that is strong, brave, and smart. Please give it a title at the beginning.
@@ -154,6 +154,8 @@ As the ship landed on the planet, the spirits of the crew were finally able to l
 
 He returned to his own planet and shared his story with others, warning them about the dangers of the ghost ship and encouraging them to be brave and honest, just like he was./
 
-Genre,Mood,Characters and their traits: Grade ${gradeLevel} reading level, ${genre},${mood}, ${nameAndTraits} 
+Genre,Mood,Characters and their traits: Grade ${gradeLevel} reading level, ${genre},${mood}, ${JSON.stringify(
+    nameAndTraits
+  )} 
 Fairy Tale:`;
 }
