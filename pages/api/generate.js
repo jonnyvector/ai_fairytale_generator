@@ -47,7 +47,7 @@ export default async function (req, res) {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: generatePrompt(nameAndTraits, mood, genre),
-      temperature: 0.6,
+      temperature: 0.8,
       max_tokens: 600,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
@@ -70,7 +70,7 @@ export default async function (req, res) {
 function generatePrompt(nameAndTraits, genre, mood, gradeLevel) {
   // const capitalizedName =
   //   character.name[0].toUpperCase() + name.slice(1).toLowerCase();
-  return `Create a fairy tale using the genre, grade level, mood, and names and character traits of each character provided. Give it a creative title at the beginning.
+  return `Create a fairy tale using the genre (if the genre is scary, people should die), grade level, mood, and names and character traits of each character provided. Give it a creative title at the beginning.
 
 Grade Level,Genre, Mood, Character, the Character's form and their traits: Grade Level, Genre, Mood, Character and their traits: Grade 4, Science Fiction, Funny, Bill who is a tiger that is strong, brave, and smart. Please give it a title at the beginning.
 Fairy Tale: 
@@ -132,6 +132,27 @@ On another planet, they met a race of giant space slugs who were struggling to f
 Throughout the journey, Bill's companionship and his unique abilities made him an invaluable member of the team and the aliens came to consider him as a true friend./
 
 When the journey finally came to an end, Bill had to return to his home planet, but he knew that his adventures in space had just begun. From that day on, he made regular trips to visit his alien friends, always ready for a new adventure in the vast reaches of space./
+Create a fairy tale using the genre, grade level, mood, and names and character traits of each character provided
+
+Grade Level, Genre, Mood, Character and their traits: Grade 4, Science Fiction, Scary, Bill who is strong, brave, and honest
+Fairy Tale:
+Title: Bill and the Ghost Ship*
+
+Once upon a time, in a distant galaxy, there was a strong, brave and honest man named Bill. He was a skilled space explorer and had been on many dangerous missions, but none as terrifying as the one he embarked on next./
+
+Bill received a distress signal from a mysterious ghost ship that had been spotted drifting in the outer reaches of the galaxy. Many had tried to investigate it, but none had returned. Undeterred, Bill set out to find the ship, determined to uncover its secrets./
+
+As he approached the ghost ship, Bill could feel the hair on the back of his neck standing up. The ship was old and decrepit, and it seemed to be abandoned. But as he boarded it, he heard strange noises coming from deep within the ship./
+
+Ignoring his fear, Bill ventured deeper into the ship, determined to find out what was causing the noises. He soon discovered that the ship was haunted by the spirits of the crew who had died on board. They had been trapped on the ship for centuries and were desperate to be freed./
+
+Bill, being a honest and brave person, listened to the spirits and heard their story, They were once a crew of a spaceship, they were attacked by a space pirate, but they fought back and killed the pirate and his crew, but in the process they were hit by a missile and ship got damaged and they got lost in the space and died./
+
+Bill knew he had to help them. He searched the ship and found an old console that controlled the ship's navigation. With his strength and bravery, he managed to repair the console and set a course for the nearest planet./
+
+As the ship landed on the planet, the spirits of the crew were finally able to leave and move on to the afterlife. Bill felt a sense of satisfaction knowing he had helped the spirits find peace./
+
+He returned to his own planet and shared his story with others, warning them about the dangers of the ghost ship and encouraging them to be brave and honest, just like he was./
 
 Genre,Mood,Characters and their traits: Grade ${gradeLevel} reading level, ${genre},${mood}, ${nameAndTraits} 
 Fairy Tale:`;
