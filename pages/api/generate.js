@@ -55,8 +55,17 @@ export default async function (req, res) {
   } catch (error) {
     // Consider adjusting the error handling logic for your use case
     if (error.response) {
-      console.error(error.response.status, error.response.data);
-      res.status(error.response.status).json(error.response.data);
+      if (error.response.status === 504) {
+        console.error("Gateway Timeout: Server took too long to respond");
+        res.status(504).json({
+          error: {
+            message: "Gateway Timeout: Server took too long to respond",
+          },
+        });
+      } else {
+        console.error(error.response.status, error.response.data);
+        res.status(error.response.status).json(error.response.data);
+      }
     } else {
       console.error(`Error with OpenAI API request: ${error.message}`);
       res.status(500).json({
