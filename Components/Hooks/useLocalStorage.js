@@ -8,14 +8,13 @@ function useLocalStorage(key, initialValue) {
       if (typeof window === "undefined") return initialValue;
       // Get from local storage by key
       const item = window.localStorage.getItem(key);
-      console.log(item);
+
       // Parse stored json or if none return initialValue
       const storedTheme = item ? JSON.parse(item) : initialValue;
-      console.log(storedTheme);
+
       return storedTheme;
     } catch (error) {
       // If error also return initialValue
-      console.log(error);
       return initialValue;
     }
   });
@@ -34,7 +33,7 @@ function useLocalStorage(key, initialValue) {
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
       // A more advanced implementation would handle the error case
-      console.log(error);
+      // console.log(error);
     }
   };
 

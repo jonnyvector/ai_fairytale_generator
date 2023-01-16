@@ -21,8 +21,6 @@ export default async function (req, res) {
   const genre = req.body.genre;
   const gradeLevel = req.body.gradeLevel;
 
-  console.log(character, gradeLevel, mood, genre);
-
   const name = character[0]?.name || "";
   if (name.trim().length === 0) {
     res.status(400).json({
@@ -33,16 +31,9 @@ export default async function (req, res) {
     return;
   }
 
-  console.log(character);
-  console.log(gradeLevel);
-
   const nameAndTraits = character.map((character) => {
     return `${character.name} who is a ${character.form} that is ${character.tags}`;
   });
-
-  console.log(nameAndTraits);
-
-  console.log(JSON.stringify(nameAndTraits));
 
   try {
     const completion = await openai.createCompletion({

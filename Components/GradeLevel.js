@@ -6,8 +6,9 @@ function GradeLevel(props) {
   return (
     <Card title="Choose a Grade Level">
       <div>
-        {availableGrades.map((grade) => (
+        {availableGrades.map((grade, i) => (
           <SmallButton
+            key={i}
             disabled={props.isLoading}
             isClicked={props.selectedGradeLevel === grade}
             onClick={() => {

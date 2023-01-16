@@ -11,7 +11,6 @@ function SelectMood(props) {
     { mood: "thrilling", label: "Thrilling" },
     { mood: "dramatic", label: "Dramatic" },
   ];
-  // console.log(props.selectedMood);
 
   return (
     <Card title={"Now Set the Mood!"}>

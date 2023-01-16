@@ -114,7 +114,6 @@ export default function Home() {
         );
       }
       setIsLoading(false);
-      // console.log(data);
       setResult(data.result);
     } catch (error) {
       setIsLoading(false);
